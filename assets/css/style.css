@@ -135,8 +135,10 @@ h1 {
   & img {
     mix-blend-mode: multiply;
     width: 100%;
+    max-width: 600px;
     filter: drop-shadow(-15px 0 0 #d0d0d0);
     position: static;
+    align-self: center;
   }
 
   & h1 {
@@ -162,7 +164,6 @@ h1 {
 
   .hub-img img{
     width: 80%;
-    align-self: center;
   }
 }
 
