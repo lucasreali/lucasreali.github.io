@@ -1,12 +1,11 @@
 :root {
-  --black: #000000d0;
-  --bege: #dbd2c2;
+  --black: #262626;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: "Manrope";
+  font-family: Manrope;
 }
 
 a {
@@ -14,26 +13,26 @@ a {
   color: var(--black);
 }
 
-ul {
+li {
   list-style: none;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
+h1 {
+  font-family: cursive;
 }
 
 .blog a {
-  font-size: 20px;
   position: fixed;
-  display: block;
-  padding: 8px 20px;
-  border: 1px solid var(--black);
-  text-align: center;
-  border-radius: 30px;
-  right: 0;
+  font-size: 20px;
   top: 10px;
   right: 10px;
+  border: 2px solid var(--black);
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: var(--black);
+  font-weight: 600;
+  z-index: 1;
 }
 
 .blog a:hover {
@@ -44,71 +43,41 @@ ul {
 }
 
 #hub {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   height: 100vh;
 }
 
-.hub-img {
-  background-color: var(--bege);
-  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.hub-img h1 {
-  translate: 0 -650px;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.hub-img img {
-  position: absolute;
-  width: 700px;
-  filter: drop-shadow(-5px 0 5px rgba(0, 0, 0, 0.448));
-  mix-blend-mode: multiply;
-  translate: -50px;
-}
-
-@media (max-width: 1200px) {
-  .hub-img img {
-    width: 500px;
-  }
-
-  .hub-img h1 {
-    translate: 0 -500px;
-  }
-}
-
 .information {
-  display: grid;
-  grid-template-rows: 2fr 1fr;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .info-container {
-  display: grid;
-  justify-content: center;
-  padding: 0 15px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+.about {
+  padding-top: 30px;
 }
 
 .black-box {
-  box-shadow: 0 -5px 5px var(--black);
   background-color: var(--black);
   color: white;
-  padding-left: 20px;
-  display: flex;
-  flex-wrap: wrap;
+  height: 200px;
 }
 
 .black-box-info {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
-
-  height: 250px;
-  background: #000;
+  align-items: center;
 }
 
 .skills .skills-list {
@@ -116,40 +85,84 @@ ul {
   flex-wrap: wrap;
   width: 250px;
   gap: 5px;
-}
-
-.skills .skills-list li {
-  border: 1px solid #ffffff6f;
-  font-size: 10px;
-  padding: 10px 20px;
-  border-radius: 20px;
+  translate: 0 20px;
+  & li {
+    border: 1px solid #ffffff6f;
+    font-size: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
 }
 
 .follow-img {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-}
+  gap: 25px;
+  transform: scale(0.85);
 
-.follow-img li {
-  border: 1px solid #ffffff6f;
-  padding: 10px;
-  border-radius: 50%;
-  height: 10px;
-  width: 10px;
-}
+  translate: 0px 15px;
 
-.follow-img li img {
-  height: 10px;
-  width: 10px;
   filter: invert();
-  transform: scale(1.3);
-  translate: 0px -6.5px;
+
+  & img {
+    width: 15px;
+    translate: 0 1px;
+  }
+
+  & a {
+    padding: 7px 10px;
+    border: 1px solid var(--black);
+    border-radius: 30px;
+  }
+
+  & a:hover {
+    filter: invert();
+    background-color: #fff;
+    transition: all 0.2s ease-out;
+  }
 }
 
-.follow-img li:hover {
-  filter: invert();
-  background-color: var(--black);
-  transform: scale(1.2);
-  transition: all 0.2s ease-out;
+.hub-img {
+  background-color: #dbd2c2;
+  color: #ffffff;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  & img {
+    mix-blend-mode: multiply;
+    width: 100%;
+    filter: drop-shadow(-15px 0 0 #d0d0d0);
+    position: static;
+  }
+
+  & h1 {
+    padding-top: 100px;
+  }
 }
+
+@media (max-width: 800px) {
+  #hub {
+    display: grid;
+    flex-direction: column-reverse;
+    height: 200vh;
+  }
+
+  .information {
+    order: 1;
+  }
+
+  .information,
+  .hub-img {
+    width: 100%;
+  }
+
+  .hub-img img{
+    width: 80%;
+    align-self: center;
+  }
+}
+
