@@ -17,10 +17,6 @@ li {
   list-style: none;
 }
 
-h1 {
-  font-family: cursive;
-}
-
 .blog a {
   position: fixed;
   font-size: 20px;
@@ -65,7 +61,15 @@ h1 {
 }
 
 .about {
-  padding-top: 30px;
+  padding-top: 40px;
+
+  & h1 {
+    padding-left: 15px;
+  }
+
+  & p {
+    padding-top: 30px;
+  }
 }
 
 .black-box {
@@ -143,6 +147,8 @@ h1 {
 
   & h1 {
     padding-top: 100px;
+    font-family: cursive;
+    font-weight: 300;
   }
 }
 
@@ -162,8 +168,7 @@ h1 {
     width: 100%;
   }
 
-  .hub-img img{
+  .hub-img img {
     width: 80%;
   }
 }
-
