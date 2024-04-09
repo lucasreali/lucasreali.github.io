@@ -69,6 +69,12 @@ li {
 
   & p {
     padding-top: 30px;
+    font-size: 13px;
+  }
+
+  & .coment {
+    font-size: 12px;
+    color: var(--black);
   }
 }
 
