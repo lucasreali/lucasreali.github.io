@@ -114,7 +114,7 @@ hr {
     section {
         width: 100%;
         align-items: center;
-        padding-top: 100px;
+        padding: 8ch 0;
         flex-direction: column;
         overflow: unset;
         height: unset;
@@ -123,7 +123,8 @@ hr {
     .info {
         max-width: unset;
         width: 70%;
-        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        gap: 5px;
     }
 
     .projetos {
@@ -134,11 +135,16 @@ hr {
 @media (max-width: 900px) {
 
     * {
-        font-size: 50%;
+        font-size: 45%;
+        line-height: 2.7rem;
     }
 
     .info {
         width: 80%;
+    }
+
+    .info h1 {
+        margin-bottom: 15px;
     }
 
     .projetos {
