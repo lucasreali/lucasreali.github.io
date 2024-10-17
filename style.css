@@ -13,6 +13,7 @@
     box-sizing: border-box;
     text-decoration: none;
     color: var(--white);
+    font-size: 62.5%;
 }
 
 body {
@@ -42,7 +43,7 @@ section {
 .info h1
 {
     text-shadow: 0 0 15px #f952435c;
-    font-size: 36px;
+    font-size: 3.6rem;
     color: var(--red);
     text-decoration: underline;
     text-underline-offset: 10px;
@@ -52,16 +53,17 @@ section {
 
 h2 {
     margin-bottom: 10px;
-    font-size: 32px;
+    font-size: 3.2rem;
     color: var(--red);
     font-style: italic;
 }
 a {
+    font-size: 2rem;
     color: #43B3F9;
 }
 
 p, li {
-    font-size: 20px;
+    font-size: 2rem;
     text-align: justify;
 }
 
@@ -75,8 +77,12 @@ p, li {
     overflow: scroll;
 }
 
+.projeto a {
+    font-size: 2.8rem;
+}
+
 .projeto h3{
-    font-size: 28px;
+    font-size: 2.8rem;
     margin-bottom: 10px;
 }
 
@@ -94,4 +100,48 @@ hr {
     margin: 20px 0;
     color: #e42d2d1a;
     background-color: #000;
+}
+
+/* *Responsividade Celular */
+
+@media  (max-width: 1300px){
+
+    body {
+        display: unset;
+    }
+
+    section {
+        width: 100%;
+        align-items: center;
+        padding-top: 100px;
+        flex-direction: column;
+        overflow: unset;
+        height: unset;
+    }
+
+    .info {
+        max-width: unset;
+        width: 80%;
+        grid-template-rows: 1fr 2fr 2fr;
+    }
+
+    .projetos {
+        overflow: unset;
+    }
+}
+
+@media (max-width: 900px) {
+
+    * {
+        font-size: 50%;
+    }
+
+    .projetos {
+        width: 80%;
+    }
+
+    .projeto img {
+        width: 100%;
+        height: unset;
+    }
 }
